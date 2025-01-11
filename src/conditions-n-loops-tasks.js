@@ -195,8 +195,102 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  let output = '';
+
+  for (let i = 0; i < numberStr.length; i += 1) {
+    if (i === 0) {
+      switch (numberStr[i]) {
+        case ',':
+          output += 'point';
+          break;
+        case '.':
+          output += 'point';
+          break;
+        case '-':
+          output += 'minus';
+          break;
+        case '0':
+          output += 'zero';
+          break;
+        case '1':
+          output += 'one';
+          break;
+        case '2':
+          output += 'two';
+          break;
+        case '3':
+          output += 'three';
+          break;
+        case '4':
+          output += 'four';
+          break;
+        case '5':
+          output += 'five';
+          break;
+        case '6':
+          output += 'six';
+          break;
+        case '7':
+          output += 'seven';
+          break;
+        case '8':
+          output += 'eight';
+          break;
+        case '9':
+          output += 'nine';
+          break;
+        default:
+          output += '';
+      }
+    } else {
+      switch (numberStr[i]) {
+        case ',':
+          output += ' point';
+          break;
+        case '.':
+          output += ' point';
+          break;
+        case '-':
+          output += ' minus';
+          break;
+        case '0':
+          output += ' zero';
+          break;
+        case '1':
+          output += ' one';
+          break;
+        case '2':
+          output += ' two';
+          break;
+        case '3':
+          output += ' three';
+          break;
+        case '4':
+          output += ' four';
+          break;
+        case '5':
+          output += ' five';
+          break;
+        case '6':
+          output += ' six';
+          break;
+        case '7':
+          output += ' seven';
+          break;
+        case '8':
+          output += ' eight';
+          break;
+        case '9':
+          output += ' nine';
+          break;
+        default:
+          output += '';
+      }
+    }
+  }
+
+  return output;
 }
 
 /**
